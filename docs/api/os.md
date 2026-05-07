@@ -12,7 +12,7 @@ Executes a command and returns the output.
 - `command` String: The command that is to be executed.
 
 ### Options
-- `background` Boolean: Executes the command in background and resolves the Promise immediately
+- `background` Boolean: Executes the command in background and resolve the Promise immediately
 if this is set to `true`. This option makes the process detached from the API function call, so if you need to
 connect with the newly created process later, consider using `os.spawnProcess`.
 - `stdIn` String: Standard input as a string.
@@ -38,7 +38,7 @@ await Neutralino.os.execCommand('node index.js', { envs: {
 ```
 
 ## os.spawnProcess(command, options)
-Spawns a process based on a command in background and lets developers control it.
+Spawns a process based on a command in background and let developers control it.
 
 ### Parameters
 - `command` String: The command that is to be executed in a new process.
@@ -161,7 +161,7 @@ Shows the file open dialog. You can use this function to obtain paths of existin
 
 ### Options
 - `filters` Filter[] (optional): An array of Filter objects to filter the files list.
-- `multiSelections` (optional): Enables multi selections.
+- `multiSelections` Boolean (optional): Enables multi selections.
 - `defaultPath` String (optional): Initial path/filename displayed by the dialog.
 
 #### Filter
@@ -278,7 +278,7 @@ Creates/updates the tray icon and menu.
 - `icon` String: Tray icon path. Eg: `/resources/icons/trayIcon.png`. A
           `20x20`-sized PNG image file works fine on all supported operating systems.
 - `menuItems` TrayMenuItem[]: An array of `TrayMenuItem` objects.
-- `useTemplateIcon` Boolean (optional): If this is set to `true`, activates adaptive tray icon (also known as template icons) with color-scheme updates on macOS.
+- `useTemplateIcon` Boolean (optional): If this is set to `true`, activates adaptive tray icon (aka, template icons) with color-scheme updates on macOS.
 
 #### TrayMenuItem
 
